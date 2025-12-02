@@ -8,27 +8,27 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Note No Tea",
+  title: "Random Notes",
   description: "A clean, modern notepad with advanced features like file encryption, clipboard history, export to PDF, and distraction-free writing mode.",
-  keywords: ["notepad", "notes", "writing", "text editor", "markdown", "encrypted notes", "note no tea"],
-  authors: [{ name: "Note No Tea" }],
-  creator: "Note No Tea",
-  publisher: "Note No Tea",
+  keywords: ["notepad", "notes", "writing", "text editor", "markdown", "encrypted notes"],
+  authors: [{ name: "Random Notes" }],
+  creator: "Random Notes",
+  publisher: "Random Notes",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://notenotea.app"),
+  metadataBase: new URL("https://random-notes.app"),
   openGraph: {
-    title: "Note No Tea - Minimalist Notepad",
+    title: "Random Notes - Minimalist Notepad",
     description: "A clean, modern notepad with advanced features",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Note No Tea - Minimalist Notepad",
+    title: "Random Notes - Minimalist Notepad",
     description: "A clean, modern notepad with advanced features",
   },
   robots: {

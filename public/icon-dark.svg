@@ -3,24 +3,18 @@
   <rect fill="#fafafa" width="180" height="180" rx="40"/>
   
   <!-- Paper/Note -->
-  <rect fill="#27272a" x="30" y="30" width="85" height="105" rx="6"/>
+  <rect fill="#27272a" x="40" y="35" width="100" height="120" rx="8"/>
   
   <!-- Lines on paper -->
-  <line stroke="#52525b" x1="40" y1="50" x2="105" y2="50" stroke-width="2.5" stroke-linecap="round"/>
-  <line stroke="#52525b" x1="40" y1="65" x2="98" y2="65" stroke-width="2.5" stroke-linecap="round"/>
-  <line stroke="#52525b" x1="40" y1="80" x2="90" y2="80" stroke-width="2.5" stroke-linecap="round"/>
-  <line stroke="#52525b" x1="40" y1="95" x2="82" y2="95" stroke-width="2.5" stroke-linecap="round"/>
-  <line stroke="#52525b" x1="40" y1="110" x2="74" y2="110" stroke-width="2.5" stroke-linecap="round"/>
+  <line stroke="#52525b" x1="52" y1="60" x2="128" y2="60" stroke-width="3" stroke-linecap="round"/>
+  <line stroke="#52525b" x1="52" y1="80" x2="120" y2="80" stroke-width="3" stroke-linecap="round"/>
+  <line stroke="#52525b" x1="52" y1="100" x2="108" y2="100" stroke-width="3" stroke-linecap="round"/>
+  <line stroke="#52525b" x1="52" y1="120" x2="96" y2="120" stroke-width="3" stroke-linecap="round"/>
   
-  <!-- Tea cup -->
-  <g transform="translate(105, 85)">
-    <path fill="#71717a" d="M10 10 L10 45 Q10 55 25 55 L35 55 Q50 55 50 45 L50 10 Z"/>
-    <path stroke="#71717a" d="M50 18 Q65 18 65 32 Q65 46 50 46" stroke-width="6" fill="none"/>
-    <path stroke="#71717a" d="M20 5 Q22 -2 20 -8" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path stroke="#71717a" d="M30 3 Q32 -4 30 -10" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path stroke="#71717a" d="M40 5 Q42 -2 40 -8" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Pencil -->
+  <g transform="translate(95, 85) rotate(45)">
+    <rect fill="#f59e0b" x="0" y="0" width="12" height="55" rx="2"/>
+    <polygon fill="#a8a29e" points="0,55 12,55 6,70"/>
   </g>
-  
-  <!-- Strike through -->
-  <line stroke="#ef4444" x1="100" y1="75" x2="165" y2="150" stroke-width="6" stroke-linecap="round"/>
 </svg>
+
