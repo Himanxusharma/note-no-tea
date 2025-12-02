@@ -18,6 +18,7 @@ export function KeyboardShortcutsDialog({ open, onOpenChange }: KeyboardShortcut
     { keys: ["Ctrl", "H"], action: "Find & Replace" },
     { keys: ["Ctrl", "Z"], action: "Undo" },
     { keys: ["Ctrl", "Y"], action: "Redo" },
+    { keys: ["Ctrl", "Shift", "T"], action: "Add Task" },
     { keys: ["Ctrl", "Shift", "E"], action: "Toggle Sidebar" },
     { keys: ["Ctrl", "/"], action: "Comment Toggle" },
     { keys: ["Ctrl", "K"], action: "Keyboard Shortcuts" },

@@ -39,6 +39,21 @@ function convertToHTML(text: string): string {
   
   // Convert strikethrough ~~text~~ to <del>text</del>
   html = html.replace(/~~(.+?)~~/g, "<del>$1</del>")
+
+  // Convert unchecked checkbox [ ] to interactive checkbox - Minimalist style
+  // Note: Must match before newlines are converted to <br>
+  // contenteditable="false" prevents cursor from entering the checkbox element
+  html = html.replace(
+    /\[ \] (.+?)(?=\n|$)/g,
+    '<span class="todo-item" data-checked="false" contenteditable="false"><span class="todo-checkbox"></span><span class="todo-text">$1</span></span>'
+  )
+  
+  // Convert checked checkbox [x] to interactive checkbox (with strikethrough) - Minimalist style
+  html = html.replace(
+    /\[x\] (.+?)(?=\n|$)/g,
+    '<span class="todo-item" data-checked="true" contenteditable="false"><span class="todo-checkbox"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"></path></svg></span><span class="todo-text">$1</span></span>'
+  )
+
   // Convert newlines to <br>
   html = html.replace(/\n/g, "<br>")
   return html
@@ -58,6 +73,12 @@ function convertToPlainText(html: string): string {
   text = text.replace(/<mark[^>]*>(.*?)<\/mark>/gi, "==$1==")
   // Convert <del> back to ~~text~~
   text = text.replace(/<del>(.*?)<\/del>/gi, "~~$1~~")
+  
+  // Convert checked todo items back to [x] format
+  text = text.replace(/<span[^>]*data-checked="true"[^>]*>.*?<span class="todo-text[^>]*>([^<]*)<\/span><\/span>/gi, "[x] $1")
+  // Convert unchecked todo items back to [ ] format
+  text = text.replace(/<span[^>]*data-checked="false"[^>]*>.*?<span class="todo-text[^>]*>([^<]*)<\/span><\/span>/gi, "[ ] $1")
+  
   // Remove any other HTML tags
   text = text.replace(/<[^>]*>/g, "")
   // Remove zero-width spaces (used for cursor positioning)
@@ -86,6 +107,76 @@ export function EditorArea({
   const savedTextRef = useRef<string>("")
   // Track if user is actively editing to prevent innerHTML sync from resetting cursor
   const isEditingRef = useRef<boolean>(false)
+
+  // Handle checkbox toggle and move to Done section
+  const handleCheckboxToggle = (lineText: string, isCurrentlyChecked: boolean) => {
+    const lines = file.content.split("\n")
+    
+    // Find the "Done" section or create marker for it
+    const doneHeaderIndex = lines.findIndex(line => line.trim().toLowerCase() === "# done" || line.trim().toLowerCase() === "done:")
+    
+    // Find the line that matches the todo item
+    const todoPattern = isCurrentlyChecked ? `[x] ${lineText}` : `[ ] ${lineText}`
+    const lineIndex = lines.findIndex(line => line.trim() === todoPattern)
+    
+    if (lineIndex === -1) return
+    
+    // Remove the line from its current position
+    lines.splice(lineIndex, 1)
+    
+    if (isCurrentlyChecked) {
+      // Unchecking - move from Done back to todos (top of file, after any existing unchecked items)
+      const newLine = `[ ] ${lineText}`
+      // Find the last unchecked todo or insert at top
+      let insertIndex = 0
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].trim().startsWith("[ ]")) {
+          insertIndex = i + 1
+        } else if (lines[i].trim().toLowerCase() === "# done" || lines[i].trim().toLowerCase() === "done:") {
+          break
+        }
+      }
+      lines.splice(insertIndex, 0, newLine)
+    } else {
+      // Checking - move to Done section
+      const newLine = `[x] ${lineText}`
+      
+      // Find or create Done section
+      let doneIndex = lines.findIndex(line => line.trim().toLowerCase() === "# done" || line.trim().toLowerCase() === "done:")
+      
+      if (doneIndex === -1) {
+        // No Done section exists, create one at the end
+        lines.push("") // Empty line before Done
+        lines.push("# Done")
+        lines.push(newLine)
+      } else {
+        // Insert after Done header
+        lines.splice(doneIndex + 1, 0, newLine)
+      }
+    }
+    
+    onContentChange(lines.join("\n"))
+  }
+
+  // Handle click on the editor to detect checkbox clicks
+  const handleEditorClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement
+    
+    // Check if clicked on a todo item or its children
+    const todoItem = target.closest(".todo-item") as HTMLElement
+    if (todoItem) {
+      e.preventDefault()
+      e.stopPropagation()
+      
+      const isChecked = todoItem.dataset.checked === "true"
+      const textSpan = todoItem.querySelector(".todo-text")
+      const lineText = textSpan?.textContent || ""
+      
+      if (lineText) {
+        handleCheckboxToggle(lineText, isChecked)
+      }
+    }
+  }
 
   useEffect(() => {
     // Skip innerHTML sync while user is actively editing to preserve cursor position
@@ -644,11 +735,31 @@ export function EditorArea({
     caretColor: "var(--color-sidebar-primary)",
   }
 
-  const handleInput = () => {
+  const handleInput = (e: React.FormEvent<HTMLDivElement>) => {
     if (editorRef.current) {
       // Set editing flag to prevent useEffect from resetting innerHTML and cursor
       isEditingRef.current = true
-      const plainText = convertToPlainText(editorRef.current.innerHTML)
+      let plainText = convertToPlainText(editorRef.current.innerHTML)
+      
+      // Auto-convert shortcuts to todo format:
+      // "[] " -> "[ ] " (checkbox)
+      // "- " at start of line -> "[ ] " (checkbox)
+      // "* " at start of line -> "[ ] " (checkbox)
+      const autoConvertPatterns = [
+        { pattern: /\[\] /g, replacement: "[ ] " },
+        { pattern: /^- $/gm, replacement: "[ ] " },
+        { pattern: /^-$/gm, replacement: "[ ] " },
+        { pattern: /\n- $/g, replacement: "\n[ ] " },
+      ]
+      
+      let wasConverted = false
+      autoConvertPatterns.forEach(({ pattern, replacement }) => {
+        if (pattern.test(plainText)) {
+          plainText = plainText.replace(pattern, replacement)
+          wasConverted = true
+        }
+      })
+      
       onContentChange(plainText)
     }
   }
@@ -717,6 +828,7 @@ export function EditorArea({
             onInput={handleInput}
             onKeyDown={handleKeyDown}
             onPaste={handlePasteEvent}
+            onClick={handleEditorClick}
             onMouseUp={handleSelection}
             onKeyUp={handleSelection}
             onContextMenu={handleContextMenu}

@@ -325,6 +325,12 @@ export function NotepadApp() {
             e.preventDefault()
             setShortcutsOpen(true)
             break
+          case "t":
+            if (e.shiftKey) {
+              e.preventDefault()
+              handleInsert("todo")
+            }
+            break
           case "z":
             e.preventDefault()
             if (e.shiftKey) {
@@ -676,6 +682,7 @@ export function NotepadApp() {
             onDecryptFile={tryDecryptFile}
             onCloseSidebar={() => setSidebarOpen(false)}
             content={activeFile?.content || ""}
+            onContentChange={(content) => updateFileContent(activeFile.id, content)}
           />
         )}
 

@@ -223,6 +223,23 @@ export function TopToolbar({
 
           <div className="hidden md:block h-6 w-px bg-border" />
 
+          {/* Quick Add Task Button */}
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => onInsert("todo")}
+                className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+              >
+                <CheckSquare className="h-4 w-4" strokeWidth={1.5} />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Add Task (Ctrl+Shift+T)</p>
+            </TooltipContent>
+          </Tooltip>
+
           {/* Insert Dropdown */}
           <DropdownMenu>
             <Tooltip>

@@ -207,6 +207,7 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --tracking-tight: -.025em;
+    --tracking-wider: .05em;
     --tracking-widest: .1em;
     --leading-snug: 1.375;
     --leading-normal: 1.5;
@@ -224,6 +225,8 @@
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     --default-font-family: "Geist", "Geist Fallback";
     --default-mono-font-family: "Geist Mono", "Geist Mono Fallback";
+    --color-foreground: var(--foreground);
+    --color-muted: var(--muted);
     --color-muted-foreground: var(--muted-foreground);
     --color-border: var(--border);
     --color-sidebar-primary: var(--sidebar-primary);
@@ -1888,12 +1891,32 @@
     border-color: var(--destructive);
   }
 
+  .border-foreground\/30 {
+    border-color: var(--foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-foreground\/30 {
+      border-color: color-mix(in oklab, var(--foreground) 30%, transparent);
+    }
+  }
+
   .border-green-400 {
     border-color: var(--color-green-400);
   }
 
   .border-input {
     border-color: var(--input);
+  }
+
+  .border-muted-foreground\/40 {
+    border-color: var(--muted-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-muted-foreground\/40 {
+      border-color: color-mix(in oklab, var(--muted-foreground) 40%, transparent);
+    }
   }
 
   .border-pink-400 {
@@ -2043,6 +2066,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-foreground\/10 {
       background-color: color-mix(in oklab, var(--foreground) 10%, transparent);
+    }
+  }
+
+  .bg-foreground\/30 {
+    background-color: var(--foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-foreground\/30 {
+      background-color: color-mix(in oklab, var(--foreground) 30%, transparent);
     }
   }
 
@@ -2465,6 +2498,11 @@
     letter-spacing: var(--tracking-tight);
   }
 
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
+
   .tracking-widest {
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
@@ -2550,8 +2588,28 @@
     }
   }
 
+  .text-foreground\/90 {
+    color: var(--foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-foreground\/90 {
+      color: color-mix(in oklab, var(--foreground) 90%, transparent);
+    }
+  }
+
   .text-muted-foreground {
     color: var(--muted-foreground);
+  }
+
+  .text-muted-foreground\/60 {
+    color: var(--muted-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-muted-foreground\/60 {
+      color: color-mix(in oklab, var(--muted-foreground) 60%, transparent);
+    }
   }
 
   .text-muted-foreground\/80 {
@@ -2619,6 +2677,10 @@
     font-variant-numeric: var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, );
   }
 
+  .line-through {
+    text-decoration-line: line-through;
+  }
+
   .underline-offset-4 {
     text-underline-offset: 4px;
   }
@@ -2634,6 +2696,10 @@
 
   .opacity-20 {
     opacity: .2;
+  }
+
+  .opacity-40 {
+    opacity: .4;
   }
 
   .opacity-50 {
@@ -2915,6 +2981,18 @@
 
   .group-focus-within\/menu-item\:opacity-100:is(:where(.group\/menu-item):focus-within *) {
     opacity: 1;
+  }
+
+  @media (hover: hover) {
+    .group-hover\:border-foreground:is(:where(.group):hover *) {
+      border-color: var(--foreground);
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:text-foreground:is(:where(.group):hover *) {
+      color: var(--foreground);
+    }
   }
 
   @media (hover: hover) {
@@ -3241,6 +3319,16 @@
     color: var(--muted-foreground);
   }
 
+  .placeholder\:text-muted-foreground\/50::placeholder {
+    color: var(--muted-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .placeholder\:text-muted-foreground\/50::placeholder {
+      color: color-mix(in oklab, var(--muted-foreground) 50%, transparent);
+    }
+  }
+
   .after\:absolute:after {
     content: var(--tw-content);
     position: absolute;
@@ -3488,6 +3576,12 @@
   }
 
   @media (hover: hover) {
+    .hover\:opacity-60:hover {
+      opacity: .6;
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:opacity-100:hover {
       opacity: 1;
     }
@@ -3552,6 +3646,10 @@
 
   .focus\:z-10:focus {
     z-index: 10;
+  }
+
+  .focus\:border-foreground:focus {
+    border-color: var(--foreground);
   }
 
   .focus\:bg-accent:focus {
@@ -6257,6 +6355,66 @@
 
   html {
     scroll-behavior: smooth;
+  }
+
+  .todo-item {
+    cursor: pointer !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 6px !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 2px 0 !important;
+    padding: 4px 8px !important;
+    transition: all .15s !important;
+    display: inline-flex !important;
+  }
+
+  .todo-item:hover {
+    background: var(--color-muted) !important;
+  }
+
+  .todo-item:hover .todo-checkbox {
+    border-color: var(--color-foreground) !important;
+  }
+
+  .todo-item[data-checked="true"] {
+    opacity: .5 !important;
+  }
+
+  .todo-item[data-checked="true"]:hover {
+    opacity: .7 !important;
+  }
+
+  .todo-checkbox {
+    border: 1.5px solid var(--color-muted-foreground) !important;
+    background: none !important;
+    border-radius: 4px !important;
+    flex-shrink: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 16px !important;
+    height: 16px !important;
+    transition: all .15s !important;
+    display: inline-flex !important;
+  }
+
+  .todo-item[data-checked="true"] .todo-checkbox {
+    border-color: var(--color-foreground) !important;
+    background: var(--color-foreground) !important;
+  }
+
+  .todo-text {
+    color: var(--color-foreground) !important;
+    font-size: inherit !important;
+    flex: 1 !important;
+  }
+
+  .todo-item[data-checked="true"] .todo-text {
+    color: var(--color-muted-foreground) !important;
+    text-decoration: line-through !important;
   }
 }
 
