@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="public/icon.svg" width="80" height="80" alt="Random Notes Logo" />
+  <img src="public/icon.svg" width="80" height="80" alt="Note No Tea Logo" />
 </p>
 
-<h1 align="center">Random Notes</h1>
+<h1 align="center">Note No Tea 🍵̶</h1>
 
 <p align="center">
-  <em>A minimal, distraction-free notepad for your thoughts</em>
+  <em>Write notes, skip the tea break</em>
 </p>
 
 <p align="center">
@@ -109,7 +109,7 @@ npm run dev
 ## 📁 Structure
 
 ```
-random-notes/
+note-no-tea/
 ├── app/                 # Next.js app router
 ├── components/
 │   ├── notepad/        # Core notepad components
@@ -142,5 +142,5 @@ MIT © 2025
 ---
 
 <p align="center">
-  <sub>Built with ❤️ for writers who love simplicity</sub>
+  <sub>Built with ❤️ for writers who prefer notes over tea</sub>
 </p>
