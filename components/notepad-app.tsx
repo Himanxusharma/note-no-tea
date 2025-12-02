@@ -644,6 +644,11 @@ export function NotepadApp() {
 
   return (
     <div className="flex h-screen flex-col bg-background text-foreground overflow-hidden">
+      {/* Skip link for keyboard navigation */}
+      <a href="#main-editor" className="skip-link">
+        Skip to editor
+      </a>
+
       {!distractionFree && <Navbar />}
 
       {!distractionFree && (

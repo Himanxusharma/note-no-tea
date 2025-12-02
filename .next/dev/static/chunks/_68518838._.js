@@ -851,12 +851,14 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         size: "icon",
                                         onClick: onToggleSidebar,
                                         className: "h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                        "aria-label": "Toggle Sidebar",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$panel$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__PanelLeft$3e$__["PanelLeft"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 93,
+                                            lineNumber: 94,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
@@ -874,12 +876,12 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "Toggle Sidebar (Ctrl+Shift+E)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 97,
+                                        lineNumber: 98,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 96,
+                                    lineNumber: 97,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -889,10 +891,11 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "hidden sm:block h-6 w-px bg-border"
+                            className: "hidden sm:block h-6 w-px bg-border",
+                            "aria-hidden": "true"
                         }, void 0, false, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 101,
+                            lineNumber: 102,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -904,22 +907,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         size: "icon",
                                         onClick: onNewFile,
                                         className: "h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                        "aria-label": "New File",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FilePlus$3e$__["FilePlus"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 106,
+                                            lineNumber: 113,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 106,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 104,
+                                    lineNumber: 105,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -927,18 +932,18 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "New File (Ctrl+N)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 117,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 116,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 103,
+                            lineNumber: 104,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenu"], {
@@ -953,32 +958,21 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                     variant: "ghost",
                                                     size: "icon",
                                                     className: "h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                                    "aria-label": "Recent Files",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__["Clock"], {
                                                         className: "h-4 w-4",
-                                                        strokeWidth: 1.5
+                                                        strokeWidth: 1.5,
+                                                        "aria-hidden": "true"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                        lineNumber: 119,
+                                                        lineNumber: 131,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 118,
+                                                    lineNumber: 125,
                                                     columnNumber: 19
                                                 }, this)
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                lineNumber: 117,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 116,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                children: "Recent Files"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/notepad/top-toolbar.tsx",
                                                 lineNumber: 124,
@@ -988,11 +982,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
                                             lineNumber: 123,
                                             columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                children: "Recent Files"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/notepad/top-toolbar.tsx",
+                                                lineNumber: 136,
+                                                columnNumber: 17
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/notepad/top-toolbar.tsx",
+                                            lineNumber: 135,
+                                            columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 115,
+                                    lineNumber: 122,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuContent"], {
@@ -1004,12 +1011,12 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                             children: "Recent Files"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 128,
+                                            lineNumber: 140,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuSeparator"], {}, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 129,
+                                            lineNumber: 141,
                                             columnNumber: 15
                                         }, this),
                                         recentFiles.length > 0 ? recentFiles.map((file)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1020,7 +1027,7 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                         strokeWidth: 1.5
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                        lineNumber: 133,
+                                                        lineNumber: 145,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1028,32 +1035,32 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                         children: file.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                        lineNumber: 134,
+                                                        lineNumber: 146,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, file.id, true, {
                                                 fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                lineNumber: 132,
+                                                lineNumber: 144,
                                                 columnNumber: 19
                                             }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "px-2 py-3 text-xs text-muted-foreground",
                                             children: "No recent files"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 150,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 127,
+                                    lineNumber: 139,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 114,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -1065,22 +1072,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         size: "icon",
                                         onClick: onOpen,
                                         className: "hidden sm:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                        "aria-label": "Open File",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$folder$2d$open$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FolderOpen$3e$__["FolderOpen"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 151,
+                                            lineNumber: 164,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 145,
+                                        lineNumber: 157,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 144,
+                                    lineNumber: 156,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1088,18 +1097,18 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "Open File (Ctrl+O)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 155,
+                                        lineNumber: 168,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 154,
+                                    lineNumber: 167,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 143,
+                            lineNumber: 155,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -1111,22 +1120,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         size: "icon",
                                         onClick: onSave,
                                         className: "hidden sm:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                        "aria-label": "Save File",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$save$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Save$3e$__["Save"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 167,
+                                            lineNumber: 181,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 161,
+                                        lineNumber: 174,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 160,
+                                    lineNumber: 173,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1134,25 +1145,26 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "Save File (Ctrl+S)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 171,
+                                        lineNumber: 185,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 170,
+                                    lineNumber: 184,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 159,
+                            lineNumber: 172,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "hidden md:block h-6 w-px bg-border"
+                            className: "hidden md:block h-6 w-px bg-border",
+                            "aria-hidden": "true"
                         }, void 0, false, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 175,
+                            lineNumber: 189,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -1164,22 +1176,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         size: "icon",
                                         onClick: onSearch,
                                         className: "h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                        "aria-label": "Search and Replace",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 180,
+                                            lineNumber: 200,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 179,
+                                        lineNumber: 193,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 178,
+                                    lineNumber: 192,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1187,25 +1201,26 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "Search & Replace (Ctrl+F)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 184,
+                                        lineNumber: 204,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 183,
+                                    lineNumber: 203,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 177,
+                            lineNumber: 191,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "hidden md:block h-6 w-px bg-border"
+                            className: "hidden md:block h-6 w-px bg-border",
+                            "aria-hidden": "true"
                         }, void 0, false, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 188,
+                            lineNumber: 208,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -1218,22 +1233,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         onClick: onUndo,
                                         disabled: !canUndo,
                                         className: "hidden md:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift disabled:opacity-30",
+                                        "aria-label": "Undo",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$undo$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Undo$3e$__["Undo"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 199,
+                                            lineNumber: 220,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 192,
+                                        lineNumber: 212,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 191,
+                                    lineNumber: 211,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1241,18 +1258,18 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "Undo (Ctrl+Z)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 203,
+                                        lineNumber: 224,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 202,
+                                    lineNumber: 223,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 190,
+                            lineNumber: 210,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -1265,22 +1282,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         onClick: onRedo,
                                         disabled: !canRedo,
                                         className: "hidden md:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift disabled:opacity-30",
+                                        "aria-label": "Redo",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$redo$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Redo$3e$__["Redo"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 216,
+                                            lineNumber: 238,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 209,
+                                        lineNumber: 230,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 208,
+                                    lineNumber: 229,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1288,25 +1307,26 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "Redo (Ctrl+Shift+Z)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 220,
+                                        lineNumber: 242,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 219,
+                                    lineNumber: 241,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 207,
+                            lineNumber: 228,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "hidden md:block h-6 w-px bg-border"
+                            className: "hidden md:block h-6 w-px bg-border",
+                            "aria-hidden": "true"
                         }, void 0, false, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 224,
+                            lineNumber: 246,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -1318,22 +1338,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         size: "icon",
                                         onClick: ()=>onInsert("todo"),
                                         className: "h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                        "aria-label": "Add Task",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$square$2d$check$2d$big$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckSquare$3e$__["CheckSquare"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 235,
+                                            lineNumber: 258,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 229,
+                                        lineNumber: 251,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 228,
+                                    lineNumber: 250,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1341,18 +1363,18 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "Add Task (Ctrl+Shift+T)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 239,
+                                        lineNumber: 262,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 238,
+                                    lineNumber: 261,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 227,
+                            lineNumber: 249,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenu"], {
@@ -1367,27 +1389,29 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                     variant: "ghost",
                                                     size: "icon",
                                                     className: "h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                                    "aria-label": "Insert content",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                                         className: "h-4 w-4",
-                                                        strokeWidth: 1.5
+                                                        strokeWidth: 1.5,
+                                                        "aria-hidden": "true"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                        lineNumber: 249,
+                                                        lineNumber: 277,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 248,
+                                                    lineNumber: 271,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                lineNumber: 247,
+                                                lineNumber: 270,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 246,
+                                            lineNumber: 269,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1395,18 +1419,18 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                 children: "Insert"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                lineNumber: 254,
+                                                lineNumber: 282,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 253,
+                                            lineNumber: 281,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 245,
+                                    lineNumber: 268,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuContent"], {
@@ -1418,12 +1442,12 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                             children: "Insert"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 258,
+                                            lineNumber: 286,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuSeparator"], {}, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 259,
+                                            lineNumber: 287,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1434,20 +1458,20 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                     strokeWidth: 1.5
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 261,
+                                                    lineNumber: 289,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Date"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 262,
+                                                    lineNumber: 290,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 260,
+                                            lineNumber: 288,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1458,20 +1482,20 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                     strokeWidth: 1.5
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 265,
+                                                    lineNumber: 293,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Time"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 266,
+                                                    lineNumber: 294,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 264,
+                                            lineNumber: 292,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1482,25 +1506,25 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                     strokeWidth: 1.5
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 269,
+                                                    lineNumber: 297,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Date & Time"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 270,
+                                                    lineNumber: 298,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 268,
+                                            lineNumber: 296,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuSeparator"], {}, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 272,
+                                            lineNumber: 300,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1511,25 +1535,25 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                     strokeWidth: 1.5
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 274,
+                                                    lineNumber: 302,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Horizontal Line"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 275,
+                                                    lineNumber: 303,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 273,
+                                            lineNumber: 301,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuSeparator"], {}, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 277,
+                                            lineNumber: 305,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1540,20 +1564,20 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                     strokeWidth: 1.5
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 279,
+                                                    lineNumber: 307,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Todo Item"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 280,
+                                                    lineNumber: 308,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 278,
+                                            lineNumber: 306,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1564,20 +1588,20 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                     strokeWidth: 1.5
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 283,
+                                                    lineNumber: 311,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Quote Block"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 284,
+                                                    lineNumber: 312,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 282,
+                                            lineNumber: 310,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -1588,32 +1612,32 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                                     strokeWidth: 1.5
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 287,
+                                                    lineNumber: 315,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Code Block"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                                    lineNumber: 288,
+                                                    lineNumber: 316,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 286,
+                                            lineNumber: 314,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 257,
+                                    lineNumber: 285,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 244,
+                            lineNumber: 267,
                             columnNumber: 11
                         }, this)
                     ]
@@ -1630,7 +1654,7 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                             children: "Saved"
                         }, void 0, false, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 296,
+                            lineNumber: 324,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -1642,22 +1666,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         size: "icon",
                                         onClick: onToggleDistractionFree,
                                         className: "hidden sm:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                        "aria-label": "Focus Mode",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$maximize$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Maximize$3e$__["Maximize"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 309,
+                                            lineNumber: 338,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 303,
+                                        lineNumber: 331,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 302,
+                                    lineNumber: 330,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1665,18 +1691,18 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "Focus Mode (Distraction Free)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 313,
+                                        lineNumber: 342,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 312,
+                                    lineNumber: 341,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 301,
+                            lineNumber: 329,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -1688,22 +1714,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         size: "icon",
                                         onClick: onKeyboardShortcuts,
                                         className: "hidden sm:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                        "aria-label": "Keyboard Shortcuts",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$keyboard$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Keyboard$3e$__["Keyboard"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 325,
+                                            lineNumber: 355,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 319,
+                                        lineNumber: 348,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 318,
+                                    lineNumber: 347,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1711,18 +1739,18 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "Keyboard Shortcuts (Ctrl+K)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 329,
+                                        lineNumber: 359,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 328,
+                                    lineNumber: 358,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 317,
+                            lineNumber: 346,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -1734,22 +1762,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         size: "icon",
                                         onClick: onSettings,
                                         className: "h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                        "aria-label": "Settings",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$settings$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Settings$3e$__["Settings"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 336,
+                                            lineNumber: 372,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 335,
+                                        lineNumber: 365,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 334,
+                                    lineNumber: 364,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1757,18 +1787,18 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "Settings"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 340,
+                                        lineNumber: 376,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 339,
+                                    lineNumber: 375,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 333,
+                            lineNumber: 363,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -1780,29 +1810,32 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         size: "icon",
                                         onClick: onToggleTheme,
                                         className: "h-8 w-8 md:h-9 md:w-9 btn-hover-lift",
+                                        "aria-label": theme === "light" ? "Switch to dark mode" : "Switch to light mode",
                                         children: theme === "light" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$moon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Moon$3e$__["Moon"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 353,
+                                            lineNumber: 390,
                                             columnNumber: 19
                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sun$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sun$3e$__["Sun"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                            lineNumber: 355,
+                                            lineNumber: 392,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 346,
+                                        lineNumber: 382,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 345,
+                                    lineNumber: 381,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tooltip$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TooltipContent"], {
@@ -1810,24 +1843,24 @@ function TopToolbar({ onNewFile, onOpen, onSave, onSearch, onSettings, onToggleT
                                         children: "Toggle Theme"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                        lineNumber: 360,
+                                        lineNumber: 397,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                                    lineNumber: 359,
+                                    lineNumber: 396,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/top-toolbar.tsx",
-                            lineNumber: 344,
+                            lineNumber: 380,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/notepad/top-toolbar.tsx",
-                    lineNumber: 294,
+                    lineNumber: 322,
                     columnNumber: 9
                 }, this)
             ]
@@ -3220,12 +3253,15 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "p-4 md:p-6 border-b border-sidebar-border flex-1 overflow-hidden flex flex-col",
+                        role: "region",
+                        "aria-label": "Tasks",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex items-center justify-between mb-4",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                         className: "text-xs font-medium uppercase tracking-wider text-muted-foreground",
+                                        id: "tasks-heading",
                                         children: "Tasks"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
@@ -3233,14 +3269,16 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: "text-muted-foreground hover:text-foreground transition-colors",
+                                        className: "text-muted-foreground hover:text-foreground transition-colors p-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                                         onClick: ()=>setIsAddingTodo(true),
+                                        "aria-label": "Add new task",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                             className: "h-4 w-4",
-                                            strokeWidth: 1.5
+                                            strokeWidth: 1.5,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 302,
+                                            lineNumber: 303,
                                             columnNumber: 13
                                         }, this)
                                     }, void 0, false, {
@@ -3276,12 +3314,12 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 309,
+                                    lineNumber: 310,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                lineNumber: 308,
+                                lineNumber: 309,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3293,20 +3331,32 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                         children: "+ Add a task..."
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 334,
+                                        lineNumber: 335,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "space-y-0.5",
+                                        role: "list",
+                                        "aria-labelledby": "tasks-heading",
                                         children: pendingTodos.map((todo, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                role: "listitem",
                                                 className: "group flex items-center gap-3 py-2.5 md:py-2 px-1 rounded-md hover:bg-sidebar-accent/30 active:bg-sidebar-accent/50 cursor-pointer transition-colors",
                                                 onClick: ()=>toggleTodo(todo),
+                                                onKeyDown: (e)=>{
+                                                    if (e.key === "Enter" || e.key === " ") {
+                                                        e.preventDefault();
+                                                        toggleTodo(todo);
+                                                    }
+                                                },
+                                                tabIndex: 0,
+                                                "aria-label": `Task: ${todo.text}. Press Enter to mark as complete`,
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "w-5 h-5 md:w-4 md:h-4 rounded border border-muted-foreground/40 group-hover:border-foreground transition-colors flex-shrink-0"
+                                                        className: "w-5 h-5 md:w-4 md:h-4 rounded border border-muted-foreground/40 group-hover:border-foreground transition-colors flex-shrink-0",
+                                                        "aria-hidden": "true"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 350,
+                                                        lineNumber: 360,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3314,37 +3364,39 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                         children: todo.text
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 351,
+                                                        lineNumber: 361,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                        className: "opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1",
+                                                        className: "opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-destructive",
                                                         onClick: (e)=>{
                                                             e.stopPropagation();
                                                             deleteTodo(todo);
                                                         },
+                                                        "aria-label": `Delete task: ${todo.text}`,
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
                                                             className: "h-4 w-4 md:h-3.5 md:w-3.5",
-                                                            strokeWidth: 1.5
+                                                            strokeWidth: 1.5,
+                                                            "aria-hidden": "true"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                            lineNumber: 361,
+                                                            lineNumber: 372,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 354,
+                                                        lineNumber: 364,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, `pending-${idx}`, true, {
                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                lineNumber: 345,
+                                                lineNumber: 346,
                                                 columnNumber: 15
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 343,
+                                        lineNumber: 344,
                                         columnNumber: 11
                                     }, this),
                                     doneTodos.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3352,46 +3404,60 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-[10px] uppercase tracking-wider text-muted-foreground/60 mb-2",
+                                                id: "completed-heading",
                                                 children: [
                                                     "Completed · ",
                                                     doneTodos.length
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                lineNumber: 370,
+                                                lineNumber: 381,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-0.5",
+                                                role: "list",
+                                                "aria-labelledby": "completed-heading",
                                                 children: doneTodos.map((todo, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        role: "listitem",
                                                         className: "group flex items-center gap-3 py-2.5 md:py-1.5 px-1 rounded-md hover:bg-sidebar-accent/30 active:bg-sidebar-accent/50 cursor-pointer opacity-40 hover:opacity-60 transition-all",
                                                         onClick: ()=>toggleTodo(todo),
+                                                        onKeyDown: (e)=>{
+                                                            if (e.key === "Enter" || e.key === " ") {
+                                                                e.preventDefault();
+                                                                toggleTodo(todo);
+                                                            }
+                                                        },
+                                                        tabIndex: 0,
+                                                        "aria-label": `Completed task: ${todo.text}. Press Enter to mark as incomplete`,
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "w-5 h-5 md:w-4 md:h-4 rounded border border-foreground/30 bg-foreground/30 flex-shrink-0 flex items-center justify-center",
+                                                                "aria-hidden": "true",
                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                                                     className: "w-3 h-3 md:w-2.5 md:h-2.5 text-background",
                                                                     fill: "none",
                                                                     stroke: "currentColor",
                                                                     viewBox: "0 0 24 24",
                                                                     strokeWidth: 3,
+                                                                    "aria-hidden": "true",
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                                         strokeLinecap: "round",
                                                                         strokeLinejoin: "round",
                                                                         d: "M5 13l4 4L19 7"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                        lineNumber: 382,
+                                                                        lineNumber: 402,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                    lineNumber: 381,
+                                                                    lineNumber: 401,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                lineNumber: 380,
+                                                                lineNumber: 400,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3399,49 +3465,51 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                                 children: todo.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                lineNumber: 385,
+                                                                lineNumber: 405,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                className: "opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1",
+                                                                className: "opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-destructive",
                                                                 onClick: (e)=>{
                                                                     e.stopPropagation();
                                                                     deleteTodo(todo);
                                                                 },
+                                                                "aria-label": `Delete task: ${todo.text}`,
                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
                                                                     className: "h-4 w-4 md:h-3.5 md:w-3.5",
-                                                                    strokeWidth: 1.5
+                                                                    strokeWidth: 1.5,
+                                                                    "aria-hidden": "true"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                    lineNumber: 395,
+                                                                    lineNumber: 416,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                lineNumber: 388,
+                                                                lineNumber: 408,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, `done-${idx}`, true, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 375,
+                                                        lineNumber: 386,
                                                         columnNumber: 19
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                lineNumber: 373,
+                                                lineNumber: 384,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 369,
+                                        lineNumber: 380,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                lineNumber: 331,
+                                lineNumber: 332,
                                 columnNumber: 9
                             }, this)
                         ]
@@ -3461,14 +3529,14 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                         strokeWidth: 1.5
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 407,
+                                        lineNumber: 428,
                                         columnNumber: 11
                                     }, this),
                                     "Recent"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                lineNumber: 406,
+                                lineNumber: 427,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3479,18 +3547,18 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                         children: file.name
                                     }, file.id, false, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 412,
+                                        lineNumber: 433,
                                         columnNumber: 13
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                lineNumber: 410,
+                                lineNumber: 431,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                        lineNumber: 405,
+                        lineNumber: 426,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3505,7 +3573,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             children: "Words"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 426,
+                                            lineNumber: 447,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3513,13 +3581,13 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             children: wordCount
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 427,
+                                            lineNumber: 448,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 425,
+                                    lineNumber: 446,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3529,7 +3597,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             children: "Characters"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 430,
+                                            lineNumber: 451,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3537,24 +3605,24 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             children: charCount
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 431,
+                                            lineNumber: 452,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 429,
+                                    lineNumber: 450,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                            lineNumber: 424,
+                            lineNumber: 445,
                             columnNumber: 9
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                        lineNumber: 423,
+                        lineNumber: 444,
                         columnNumber: 7
                     }, this),
                     contextMenu && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$context$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ContextMenu"], {
@@ -3567,7 +3635,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                         onClose: ()=>setContextMenu(null)
                     }, void 0, false, {
                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                        lineNumber: 437,
+                        lineNumber: 458,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Dialog"], {
@@ -3585,14 +3653,14 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                     className: "h-5 w-5 text-amber-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                    lineNumber: 459,
+                                                    lineNumber: 480,
                                                     columnNumber: 15
                                                 }, this),
                                                 "Unlock File"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 458,
+                                            lineNumber: 479,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogDescription"], {
@@ -3603,13 +3671,13 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 462,
+                                            lineNumber: 483,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 457,
+                                    lineNumber: 478,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3623,7 +3691,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                     children: "Password"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                    lineNumber: 468,
+                                                    lineNumber: 489,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -3641,13 +3709,13 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                     autoFocus: true
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                    lineNumber: 469,
+                                                    lineNumber: 490,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 467,
+                                            lineNumber: 488,
                                             columnNumber: 13
                                         }, this),
                                         unlockError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3657,20 +3725,20 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                    lineNumber: 486,
+                                                    lineNumber: 507,
                                                     columnNumber: 17
                                                 }, this),
                                                 unlockError
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 485,
+                                            lineNumber: 506,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 466,
+                                    lineNumber: 487,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3683,7 +3751,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             children: "Cancel"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 492,
+                                            lineNumber: 513,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -3694,31 +3762,31 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                     className: "h-4 w-4 mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                    lineNumber: 496,
+                                                    lineNumber: 517,
                                                     columnNumber: 15
                                                 }, this),
                                                 "Unlock"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 495,
+                                            lineNumber: 516,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 491,
+                                    lineNumber: 512,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                            lineNumber: 456,
+                            lineNumber: 477,
                             columnNumber: 9
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                        lineNumber: 455,
+                        lineNumber: 476,
                         columnNumber: 7
                     }, this)
                 ]
@@ -4705,8 +4773,13 @@ function EditorArea({ file, onContentChange, syntaxTheme, splitView, settings, o
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex-1 flex flex-col overflow-hidden",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            id: "main-editor",
                             ref: editorRef,
                             contentEditable: true,
+                            role: "textbox",
+                            "aria-label": "Note editor",
+                            "aria-multiline": "true",
+                            tabIndex: 0,
                             onInput: handleInput,
                             onKeyDown: handleKeyDown,
                             onPaste: handlePasteEvent,
@@ -4750,12 +4823,12 @@ function EditorArea({ file, onContentChange, syntaxTheme, splitView, settings, o
                             suppressContentEditableWarning: true
                         }, void 0, false, {
                             fileName: "[project]/components/notepad/editor-area.tsx",
-                            lineNumber: 849,
+                            lineNumber: 854,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/notepad/editor-area.tsx",
-                        lineNumber: 848,
+                        lineNumber: 853,
                         columnNumber: 11
                     }, this)
                 ]
@@ -4779,7 +4852,7 @@ function EditorArea({ file, onContentChange, syntaxTheme, splitView, settings, o
                 onHeading: handleHeading
             }, void 0, false, {
                 fileName: "[project]/components/notepad/editor-area.tsx",
-                lineNumber: 870,
+                lineNumber: 875,
                 columnNumber: 9
             }, this),
             contextMenu && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$context$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ContextMenu"], {
@@ -4792,7 +4865,7 @@ function EditorArea({ file, onContentChange, syntaxTheme, splitView, settings, o
                 }
             }, void 0, false, {
                 fileName: "[project]/components/notepad/editor-area.tsx",
-                lineNumber: 887,
+                lineNumber: 892,
                 columnNumber: 9
             }, this)
         ]
@@ -9595,9 +9668,18 @@ function NotepadApp() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex h-screen flex-col bg-background text-foreground overflow-hidden",
         children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                href: "#main-editor",
+                className: "skip-link",
+                children: "Skip to editor"
+            }, void 0, false, {
+                fileName: "[project]/components/notepad-app.tsx",
+                lineNumber: 648,
+                columnNumber: 7
+            }, this),
             !distractionFree && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Navbar"], {}, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 647,
+                lineNumber: 652,
                 columnNumber: 28
             }, this),
             !distractionFree && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$top$2d$toolbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TopToolbar"], {
@@ -9622,7 +9704,7 @@ function NotepadApp() {
                 onToggleDistractionFree: toggleDistractionFree
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 650,
+                lineNumber: 655,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -9641,7 +9723,7 @@ function NotepadApp() {
                         onContentChange: (content)=>updateFileContent(activeFile.id, content)
                     }, void 0, false, {
                         fileName: "[project]/components/notepad-app.tsx",
-                        lineNumber: 675,
+                        lineNumber: 680,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$editor$2d$area$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["EditorArea"], {
@@ -9657,13 +9739,13 @@ function NotepadApp() {
                         onToggleDistractionFree: toggleDistractionFree
                     }, void 0, false, {
                         fileName: "[project]/components/notepad-app.tsx",
-                        lineNumber: 689,
+                        lineNumber: 694,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 673,
+                lineNumber: 678,
                 columnNumber: 7
             }, this),
             !distractionFree && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$bottom$2d$status$2d$bar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BottomStatusBar"], {
@@ -9673,7 +9755,7 @@ function NotepadApp() {
                 onToggleAutoSave: ()=>setAutoSave(!autoSave)
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 704,
+                lineNumber: 709,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$search$2d$replace$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SearchReplaceDialog"], {
@@ -9683,7 +9765,7 @@ function NotepadApp() {
                 onContentChange: (content)=>updateFileContent(activeFile.id, content)
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 712,
+                lineNumber: 717,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$settings$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SettingsDialog"], {
@@ -9704,7 +9786,7 @@ function NotepadApp() {
                 currentFile: activeFile
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 719,
+                lineNumber: 724,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$encryption$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["EncryptionDialog"], {
@@ -9715,7 +9797,7 @@ function NotepadApp() {
                 onDecrypt: decryptFile
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 737,
+                lineNumber: 742,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$clipboard$2d$history$2d$panel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ClipboardHistoryPanel"], {
@@ -9730,7 +9812,7 @@ function NotepadApp() {
                 onClear: ()=>setClipboardHistory([])
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 745,
+                lineNumber: 750,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$keyboard$2d$shortcuts$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["KeyboardShortcutsDialog"], {
@@ -9738,7 +9820,7 @@ function NotepadApp() {
                 onOpenChange: setShortcutsOpen
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 757,
+                lineNumber: 762,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$undo$2d$history$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["UndoHistoryDialog"], {
@@ -9765,7 +9847,7 @@ function NotepadApp() {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 759,
+                lineNumber: 764,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$export$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ExportDialog"], {
@@ -9774,7 +9856,7 @@ function NotepadApp() {
                 file: activeFile
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 781,
+                lineNumber: 786,
                 columnNumber: 7
             }, this)
         ]

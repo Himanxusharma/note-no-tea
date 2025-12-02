@@ -142,6 +142,8 @@
     --default-font-family: "Geist", "Geist Fallback";
     --default-mono-font-family: "Geist Mono", "Geist Mono Fallback";
     --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
     --color-muted: var(--muted);
     --color-muted-foreground: var(--muted-foreground);
     --color-border: var(--border);
@@ -437,9 +439,16 @@
     }
   }
 
+  html {
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
   body {
     background-color: var(--background);
     color: var(--foreground);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 }
 
@@ -3676,6 +3685,10 @@
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 
+  .focus-visible\:ring-destructive:focus-visible {
+    --tw-ring-color: var(--destructive);
+  }
+
   .focus-visible\:ring-destructive\/20:focus-visible {
     --tw-ring-color: var(--destructive);
   }
@@ -3684,6 +3697,10 @@
     .focus-visible\:ring-destructive\/20:focus-visible {
       --tw-ring-color: color-mix(in oklab, var(--destructive) 20%, transparent);
     }
+  }
+
+  .focus-visible\:ring-primary:focus-visible {
+    --tw-ring-color: var(--primary);
   }
 
   .focus-visible\:ring-ring:focus-visible {
@@ -6340,6 +6357,32 @@
     outline: 2px solid var(--color-sidebar-primary);
     outline-offset: 2px;
     border-radius: 4px;
+  }
+
+  button:focus-visible, [role="button"]:focus-visible {
+    outline: 2px solid var(--color-sidebar-primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(var(--color-sidebar-primary), .15);
+  }
+
+  .skip-link {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+    z-index: 9999;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: top .2s;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .skip-link:focus {
+    top: 8px;
   }
 
   ::selection {

@@ -290,16 +290,17 @@ export function LeftSidebar({
       </div>
 
       {/* Todo Section - Minimalist Design */}
-      <div className="p-4 md:p-6 border-b border-sidebar-border flex-1 overflow-hidden flex flex-col">
+      <div className="p-4 md:p-6 border-b border-sidebar-border flex-1 overflow-hidden flex flex-col" role="region" aria-label="Tasks">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+          <h2 className="text-xs font-medium uppercase tracking-wider text-muted-foreground" id="tasks-heading">
             Tasks
           </h2>
           <button
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-colors p-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             onClick={() => setIsAddingTodo(true)}
+            aria-label="Add new task"
           >
-            <Plus className="h-4 w-4" strokeWidth={1.5} />
+            <Plus className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
           </button>
         </div>
 
@@ -340,25 +341,35 @@ export function LeftSidebar({
           )}
 
           {/* Pending Todos */}
-          <div className="space-y-0.5">
+          <div className="space-y-0.5" role="list" aria-labelledby="tasks-heading">
             {pendingTodos.map((todo, idx) => (
               <div
                 key={`pending-${idx}`}
+                role="listitem"
                 className="group flex items-center gap-3 py-2.5 md:py-2 px-1 rounded-md hover:bg-sidebar-accent/30 active:bg-sidebar-accent/50 cursor-pointer transition-colors"
                 onClick={() => toggleTodo(todo)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault()
+                    toggleTodo(todo)
+                  }
+                }}
+                tabIndex={0}
+                aria-label={`Task: ${todo.text}. Press Enter to mark as complete`}
               >
-                <div className="w-5 h-5 md:w-4 md:h-4 rounded border border-muted-foreground/40 group-hover:border-foreground transition-colors flex-shrink-0" />
+                <div className="w-5 h-5 md:w-4 md:h-4 rounded border border-muted-foreground/40 group-hover:border-foreground transition-colors flex-shrink-0" aria-hidden="true" />
                 <span className="text-sm flex-1 truncate text-foreground/90 group-hover:text-foreground transition-colors">
                   {todo.text}
                 </span>
                 <button
-                  className="opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1"
+                  className="opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-destructive"
                   onClick={(e) => {
                     e.stopPropagation()
                     deleteTodo(todo)
                   }}
+                  aria-label={`Delete task: ${todo.text}`}
                 >
-                  <Trash2 className="h-4 w-4 md:h-3.5 md:w-3.5" strokeWidth={1.5} />
+                  <Trash2 className="h-4 w-4 md:h-3.5 md:w-3.5" strokeWidth={1.5} aria-hidden="true" />
                 </button>
               </div>
             ))}
@@ -367,18 +378,27 @@ export function LeftSidebar({
           {/* Done Section */}
           {doneTodos.length > 0 && (
             <div className="mt-4 pt-4 border-t border-border/50">
-              <p className="text-[10px] uppercase tracking-wider text-muted-foreground/60 mb-2">
+              <p className="text-[10px] uppercase tracking-wider text-muted-foreground/60 mb-2" id="completed-heading">
                 Completed · {doneTodos.length}
               </p>
-              <div className="space-y-0.5">
+              <div className="space-y-0.5" role="list" aria-labelledby="completed-heading">
                 {doneTodos.map((todo, idx) => (
                   <div
                     key={`done-${idx}`}
+                    role="listitem"
                     className="group flex items-center gap-3 py-2.5 md:py-1.5 px-1 rounded-md hover:bg-sidebar-accent/30 active:bg-sidebar-accent/50 cursor-pointer opacity-40 hover:opacity-60 transition-all"
                     onClick={() => toggleTodo(todo)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault()
+                        toggleTodo(todo)
+                      }
+                    }}
+                    tabIndex={0}
+                    aria-label={`Completed task: ${todo.text}. Press Enter to mark as incomplete`}
                   >
-                    <div className="w-5 h-5 md:w-4 md:h-4 rounded border border-foreground/30 bg-foreground/30 flex-shrink-0 flex items-center justify-center">
-                      <svg className="w-3 h-3 md:w-2.5 md:h-2.5 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
+                    <div className="w-5 h-5 md:w-4 md:h-4 rounded border border-foreground/30 bg-foreground/30 flex-shrink-0 flex items-center justify-center" aria-hidden="true">
+                      <svg className="w-3 h-3 md:w-2.5 md:h-2.5 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3} aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -386,13 +406,14 @@ export function LeftSidebar({
                       {todo.text}
                     </span>
                     <button
-                      className="opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1"
+                      className="opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-destructive"
                       onClick={(e) => {
                         e.stopPropagation()
                         deleteTodo(todo)
                       }}
+                      aria-label={`Delete task: ${todo.text}`}
                     >
-                      <Trash2 className="h-4 w-4 md:h-3.5 md:w-3.5" strokeWidth={1.5} />
+                      <Trash2 className="h-4 w-4 md:h-3.5 md:w-3.5" strokeWidth={1.5} aria-hidden="true" />
                     </button>
                   </div>
                 ))}

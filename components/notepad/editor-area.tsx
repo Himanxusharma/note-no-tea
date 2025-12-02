@@ -823,8 +823,13 @@ export function EditorArea({
       >
         <div className="flex-1 flex flex-col overflow-hidden">
           <div
+            id="main-editor"
             ref={editorRef}
             contentEditable
+            role="textbox"
+            aria-label="Note editor"
+            aria-multiline="true"
+            tabIndex={0}
             onInput={handleInput}
             onKeyDown={handleKeyDown}
             onPaste={handlePasteEvent}

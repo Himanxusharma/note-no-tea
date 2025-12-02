@@ -445,6 +445,35 @@
     border-radius: 4px;
   }
 
+  /* Enhanced focus ring for buttons */
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid var(--color-sidebar-primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(var(--color-sidebar-primary), 0.15);
+  }
+
+  /* Skip link for keyboard navigation */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+    border-radius: 4px;
+    z-index: 9999;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus {
+    top: 8px;
+  }
+
   /* Text selection styling */
   ::selection {
     background: var(--color-sidebar-primary);

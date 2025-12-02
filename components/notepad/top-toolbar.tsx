@@ -89,8 +89,9 @@ export function TopToolbar({
                 size="icon"
                 onClick={onToggleSidebar}
                 className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                aria-label="Toggle Sidebar"
               >
-                <PanelLeft className="h-4 w-4" strokeWidth={1.5} />
+                <PanelLeft className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -98,12 +99,18 @@ export function TopToolbar({
             </TooltipContent>
           </Tooltip>
 
-          <div className="hidden sm:block h-6 w-px bg-border" />
+          <div className="hidden sm:block h-6 w-px bg-border" aria-hidden="true" />
 
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" onClick={onNewFile} className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift">
-                <FilePlus className="h-4 w-4" strokeWidth={1.5} />
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={onNewFile} 
+                className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                aria-label="New File"
+              >
+                <FilePlus className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -115,8 +122,13 @@ export function TopToolbar({
             <Tooltip>
               <TooltipTrigger asChild>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift">
-                    <Clock className="h-4 w-4" strokeWidth={1.5} />
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                    aria-label="Recent Files"
+                  >
+                    <Clock className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                   </Button>
                 </DropdownMenuTrigger>
               </TooltipTrigger>
@@ -147,8 +159,9 @@ export function TopToolbar({
                 size="icon"
                 onClick={onOpen}
                 className="hidden sm:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                aria-label="Open File"
               >
-                <FolderOpen className="h-4 w-4" strokeWidth={1.5} />
+                <FolderOpen className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -163,8 +176,9 @@ export function TopToolbar({
                 size="icon"
                 onClick={onSave}
                 className="hidden sm:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                aria-label="Save File"
               >
-                <Save className="h-4 w-4" strokeWidth={1.5} />
+                <Save className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -172,12 +186,18 @@ export function TopToolbar({
             </TooltipContent>
           </Tooltip>
 
-          <div className="hidden md:block h-6 w-px bg-border" />
+          <div className="hidden md:block h-6 w-px bg-border" aria-hidden="true" />
 
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" onClick={onSearch} className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift">
-                <Search className="h-4 w-4" strokeWidth={1.5} />
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={onSearch} 
+                className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                aria-label="Search and Replace"
+              >
+                <Search className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -185,7 +205,7 @@ export function TopToolbar({
             </TooltipContent>
           </Tooltip>
 
-          <div className="hidden md:block h-6 w-px bg-border" />
+          <div className="hidden md:block h-6 w-px bg-border" aria-hidden="true" />
 
           <Tooltip>
             <TooltipTrigger asChild>
@@ -195,8 +215,9 @@ export function TopToolbar({
                 onClick={onUndo}
                 disabled={!canUndo}
                 className="hidden md:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift disabled:opacity-30"
+                aria-label="Undo"
               >
-                <Undo className="h-4 w-4" strokeWidth={1.5} />
+                <Undo className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -212,8 +233,9 @@ export function TopToolbar({
                 onClick={onRedo}
                 disabled={!canRedo}
                 className="hidden md:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift disabled:opacity-30"
+                aria-label="Redo"
               >
-                <Redo className="h-4 w-4" strokeWidth={1.5} />
+                <Redo className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -221,7 +243,7 @@ export function TopToolbar({
             </TooltipContent>
           </Tooltip>
 
-          <div className="hidden md:block h-6 w-px bg-border" />
+          <div className="hidden md:block h-6 w-px bg-border" aria-hidden="true" />
 
           {/* Quick Add Task Button */}
           <Tooltip>
@@ -231,8 +253,9 @@ export function TopToolbar({
                 size="icon"
                 onClick={() => onInsert("todo")}
                 className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                aria-label="Add Task"
               >
-                <CheckSquare className="h-4 w-4" strokeWidth={1.5} />
+                <CheckSquare className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -245,8 +268,13 @@ export function TopToolbar({
             <Tooltip>
               <TooltipTrigger asChild>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon" className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift">
-                    <Plus className="h-4 w-4" strokeWidth={1.5} />
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                    aria-label="Insert content"
+                  >
+                    <Plus className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                   </Button>
                 </DropdownMenuTrigger>
               </TooltipTrigger>
@@ -305,8 +333,9 @@ export function TopToolbar({
                 size="icon"
                 onClick={onToggleDistractionFree}
                 className="hidden sm:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                aria-label="Focus Mode"
               >
-                <Maximize className="h-4 w-4" strokeWidth={1.5} />
+                <Maximize className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -321,8 +350,9 @@ export function TopToolbar({
                 size="icon"
                 onClick={onKeyboardShortcuts}
                 className="hidden sm:flex h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                aria-label="Keyboard Shortcuts"
               >
-                <Keyboard className="h-4 w-4" strokeWidth={1.5} />
+                <Keyboard className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -332,8 +362,14 @@ export function TopToolbar({
 
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" onClick={onSettings} className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift">
-                <Settings className="h-4 w-4" strokeWidth={1.5} />
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={onSettings} 
+                className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                aria-label="Settings"
+              >
+                <Settings className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -348,11 +384,12 @@ export function TopToolbar({
                 size="icon"
                 onClick={onToggleTheme}
                 className="h-8 w-8 md:h-9 md:w-9 btn-hover-lift"
+                aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
               >
                 {theme === "light" ? (
-                  <Moon className="h-4 w-4" strokeWidth={1.5} />
+                  <Moon className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                 ) : (
-                  <Sun className="h-4 w-4" strokeWidth={1.5} />
+                  <Sun className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                 )}
               </Button>
             </TooltipTrigger>
