@@ -657,8 +657,33 @@ export function EditorArea({
     if (e.key === "Enter") {
       e.preventDefault()
       
-      // Use the browser's native line break insertion which handles cursor positioning correctly
-      document.execCommand("insertLineBreak")
+      const selection = window.getSelection()
+      if (!selection || selection.rangeCount === 0) return
+
+      const range = selection.getRangeAt(0)
+      range.deleteContents()
+
+      // Create a br element for the line break
+      const br = document.createElement("br")
+      range.insertNode(br)
+
+      // Check if we're at the end of the editor (no content after the br)
+      // In this case, we need to add another br or a text node for the cursor
+      const isAtEnd = !br.nextSibling || 
+        (br.nextSibling.nodeType === Node.TEXT_NODE && !br.nextSibling.textContent?.trim())
+
+      if (isAtEnd) {
+        // Add a second br element - browsers need this to show cursor on new line at end
+        const br2 = document.createElement("br")
+        br.parentNode?.insertBefore(br2, br.nextSibling)
+      }
+
+      // Move cursor after the first br (to the new line)
+      const newRange = document.createRange()
+      newRange.setStartAfter(br)
+      newRange.collapse(true)
+      selection.removeAllRanges()
+      selection.addRange(newRange)
 
       if (editorRef.current) {
         // Set editing flag to prevent useEffect from resetting innerHTML and cursor

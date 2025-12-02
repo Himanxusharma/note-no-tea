@@ -4176,8 +4176,27 @@ function EditorArea({ file, onContentChange, syntaxTheme, splitView, settings, o
     const handleKeyDown = (e)=>{
         if (e.key === "Enter") {
             e.preventDefault();
-            // Use the browser's native line break insertion which handles cursor positioning correctly
-            document.execCommand("insertLineBreak");
+            const selection = window.getSelection();
+            if (!selection || selection.rangeCount === 0) return;
+            const range = selection.getRangeAt(0);
+            range.deleteContents();
+            // Create a br element for the line break
+            const br = document.createElement("br");
+            range.insertNode(br);
+            // Check if we're at the end of the editor (no content after the br)
+            // In this case, we need to add another br or a text node for the cursor
+            const isAtEnd = !br.nextSibling || br.nextSibling.nodeType === Node.TEXT_NODE && !br.nextSibling.textContent?.trim();
+            if (isAtEnd) {
+                // Add a second br element - browsers need this to show cursor on new line at end
+                const br2 = document.createElement("br");
+                br.parentNode?.insertBefore(br2, br.nextSibling);
+            }
+            // Move cursor after the first br (to the new line)
+            const newRange = document.createRange();
+            newRange.setStartAfter(br);
+            newRange.collapse(true);
+            selection.removeAllRanges();
+            selection.addRange(newRange);
             if (editorRef.current) {
                 // Set editing flag to prevent useEffect from resetting innerHTML and cursor
                 isEditingRef.current = true;
@@ -4195,7 +4214,7 @@ function EditorArea({ file, onContentChange, syntaxTheme, splitView, settings, o
                 children: "Exit Focus Mode"
             }, void 0, false, {
                 fileName: "[project]/components/notepad/editor-area.tsx",
-                lineNumber: 675,
+                lineNumber: 700,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4221,12 +4240,12 @@ function EditorArea({ file, onContentChange, syntaxTheme, splitView, settings, o
                             suppressContentEditableWarning: true
                         }, void 0, false, {
                             fileName: "[project]/components/notepad/editor-area.tsx",
-                            lineNumber: 689,
+                            lineNumber: 714,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/notepad/editor-area.tsx",
-                        lineNumber: 688,
+                        lineNumber: 713,
                         columnNumber: 9
                     }, this),
                     splitView !== "none" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4248,18 +4267,18 @@ function EditorArea({ file, onContentChange, syntaxTheme, splitView, settings, o
                             suppressContentEditableWarning: true
                         }, void 0, false, {
                             fileName: "[project]/components/notepad/editor-area.tsx",
-                            lineNumber: 712,
+                            lineNumber: 737,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/notepad/editor-area.tsx",
-                        lineNumber: 711,
+                        lineNumber: 736,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/notepad/editor-area.tsx",
-                lineNumber: 683,
+                lineNumber: 708,
                 columnNumber: 7
             }, this),
             selectionPos && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$text$2d$selection$2d$toolbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TextSelectionToolbar"], {
@@ -4277,7 +4296,7 @@ function EditorArea({ file, onContentChange, syntaxTheme, splitView, settings, o
                 onHeading: handleHeading
             }, void 0, false, {
                 fileName: "[project]/components/notepad/editor-area.tsx",
-                lineNumber: 733,
+                lineNumber: 758,
                 columnNumber: 9
             }, this),
             contextMenu && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$context$2d$menu$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ContextMenu"], {
@@ -4290,13 +4309,13 @@ function EditorArea({ file, onContentChange, syntaxTheme, splitView, settings, o
                 }
             }, void 0, false, {
                 fileName: "[project]/components/notepad/editor-area.tsx",
-                lineNumber: 750,
+                lineNumber: 775,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/notepad/editor-area.tsx",
-        lineNumber: 673,
+        lineNumber: 698,
         columnNumber: 5
     }, this);
 }
@@ -8399,6 +8418,30 @@ const getWelcomeContent = ()=>{
     return `${dateStr}, ${timeStr}
 ─────────────────────`;
 };
+// localStorage keys
+const STORAGE_KEYS = {
+    FILES: "notepad_files",
+    ACTIVE_FILE_ID: "notepad_active_file_id",
+    SETTINGS: "notepad_settings",
+    THEME: "notepad_theme",
+    RECENT_FILES: "notepad_recent_files"
+};
+// Helper to safely parse JSON from localStorage
+const safeJSONParse = (value, fallback)=>{
+    if (!value) return fallback;
+    try {
+        return JSON.parse(value);
+    } catch  {
+        return fallback;
+    }
+};
+// Helper to restore Date objects from localStorage
+const restoreFileDates = (files)=>{
+    return files.map((file)=>({
+            ...file,
+            lastModified: new Date(file.lastModified)
+        }));
+};
 function NotepadApp() {
     _s();
     const [mounted, setMounted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -8469,9 +8512,67 @@ function NotepadApp() {
         }
     }["NotepadApp.useCallback[toggleDistractionFree]"], []);
     // Initialize files on client side only to avoid hydration mismatch
+    // Load from localStorage if available, otherwise create default welcome file
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "NotepadApp.useEffect": ()=>{
             if (!mounted) {
+                // Try to load saved data from localStorage
+                const savedFiles = localStorage.getItem(STORAGE_KEYS.FILES);
+                const savedActiveFileId = localStorage.getItem(STORAGE_KEYS.ACTIVE_FILE_ID);
+                const savedSettings = localStorage.getItem(STORAGE_KEYS.SETTINGS);
+                const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
+                const savedRecentFiles = localStorage.getItem(STORAGE_KEYS.RECENT_FILES);
+                if (savedFiles) {
+                    // Restore files from localStorage
+                    const parsedFiles = restoreFileDates(safeJSONParse(savedFiles, []));
+                    if (parsedFiles.length > 0) {
+                        setFiles(parsedFiles);
+                        // Restore active file ID
+                        const activeId = savedActiveFileId || parsedFiles[0].id;
+                        setActiveFileId(activeId);
+                        // Restore recent files
+                        if (savedRecentFiles) {
+                            setRecentFiles(safeJSONParse(savedRecentFiles, [
+                                activeId
+                            ]));
+                        }
+                        // Initialize history for all files
+                        const initialHistory = new Map();
+                        const initialHistoryIndex = new Map();
+                        parsedFiles.forEach({
+                            "NotepadApp.useEffect": (file)=>{
+                                initialHistory.set(file.id, [
+                                    {
+                                        content: file.content,
+                                        timestamp: new Date()
+                                    }
+                                ]);
+                                initialHistoryIndex.set(file.id, 0);
+                            }
+                        }["NotepadApp.useEffect"]);
+                        setHistory(initialHistory);
+                        setHistoryIndex(initialHistoryIndex);
+                    } else {
+                        // No valid files, create default
+                        createDefaultFile();
+                    }
+                } else {
+                    // No saved files, create default welcome file
+                    createDefaultFile();
+                }
+                // Restore settings
+                if (savedSettings) {
+                    const parsedSettings = safeJSONParse(savedSettings, settings);
+                    setSettings(parsedSettings);
+                }
+                // Restore theme
+                if (savedTheme) {
+                    const parsedTheme = safeJSONParse(savedTheme, "light");
+                    setTheme(parsedTheme);
+                }
+                setMounted(true);
+            }
+            function createDefaultFile() {
                 const initialFile = {
                     id: "1",
                     name: "Welcome.txt",
@@ -8499,7 +8600,6 @@ function NotepadApp() {
                         0
                     ]
                 ]));
-                setMounted(true);
             }
         }
     }["NotepadApp.useEffect"], [
@@ -8519,6 +8619,61 @@ function NotepadApp() {
         mounted,
         isMobile,
         sidebarInitialized
+    ]);
+    // Save files to localStorage whenever they change
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "NotepadApp.useEffect": ()=>{
+            if (mounted && files.length > 0) {
+                localStorage.setItem(STORAGE_KEYS.FILES, JSON.stringify(files));
+            }
+        }
+    }["NotepadApp.useEffect"], [
+        mounted,
+        files
+    ]);
+    // Save active file ID to localStorage
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "NotepadApp.useEffect": ()=>{
+            if (mounted && activeFileId) {
+                localStorage.setItem(STORAGE_KEYS.ACTIVE_FILE_ID, JSON.stringify(activeFileId));
+            }
+        }
+    }["NotepadApp.useEffect"], [
+        mounted,
+        activeFileId
+    ]);
+    // Save settings to localStorage
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "NotepadApp.useEffect": ()=>{
+            if (mounted) {
+                localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(settings));
+            }
+        }
+    }["NotepadApp.useEffect"], [
+        mounted,
+        settings
+    ]);
+    // Save theme to localStorage
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "NotepadApp.useEffect": ()=>{
+            if (mounted) {
+                localStorage.setItem(STORAGE_KEYS.THEME, JSON.stringify(theme));
+            }
+        }
+    }["NotepadApp.useEffect"], [
+        mounted,
+        theme
+    ]);
+    // Save recent files to localStorage
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "NotepadApp.useEffect": ()=>{
+            if (mounted && recentFiles.length > 0) {
+                localStorage.setItem(STORAGE_KEYS.RECENT_FILES, JSON.stringify(recentFiles));
+            }
+        }
+    }["NotepadApp.useEffect"], [
+        mounted,
+        recentFiles
     ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "NotepadApp.useEffect": ()=>{
@@ -8931,12 +9086,12 @@ function NotepadApp() {
                 children: "Loading..."
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 516,
+                lineNumber: 634,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/notepad-app.tsx",
-            lineNumber: 515,
+            lineNumber: 633,
             columnNumber: 7
         }, this);
     }
@@ -8945,7 +9100,7 @@ function NotepadApp() {
         children: [
             !distractionFree && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$navbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Navbar"], {}, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 523,
+                lineNumber: 641,
                 columnNumber: 28
             }, this),
             !distractionFree && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$top$2d$toolbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TopToolbar"], {
@@ -8970,7 +9125,7 @@ function NotepadApp() {
                 onToggleDistractionFree: toggleDistractionFree
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 526,
+                lineNumber: 644,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -8988,7 +9143,7 @@ function NotepadApp() {
                         content: activeFile?.content || ""
                     }, void 0, false, {
                         fileName: "[project]/components/notepad-app.tsx",
-                        lineNumber: 551,
+                        lineNumber: 669,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$editor$2d$area$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["EditorArea"], {
@@ -9004,13 +9159,13 @@ function NotepadApp() {
                         onToggleDistractionFree: toggleDistractionFree
                     }, void 0, false, {
                         fileName: "[project]/components/notepad-app.tsx",
-                        lineNumber: 564,
+                        lineNumber: 682,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 549,
+                lineNumber: 667,
                 columnNumber: 7
             }, this),
             !distractionFree && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$bottom$2d$status$2d$bar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BottomStatusBar"], {
@@ -9020,7 +9175,7 @@ function NotepadApp() {
                 onToggleAutoSave: ()=>setAutoSave(!autoSave)
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 579,
+                lineNumber: 697,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$search$2d$replace$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SearchReplaceDialog"], {
@@ -9030,7 +9185,7 @@ function NotepadApp() {
                 onContentChange: (content)=>updateFileContent(activeFile.id, content)
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 587,
+                lineNumber: 705,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$settings$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SettingsDialog"], {
@@ -9051,7 +9206,7 @@ function NotepadApp() {
                 currentFile: activeFile
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 594,
+                lineNumber: 712,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$encryption$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["EncryptionDialog"], {
@@ -9062,7 +9217,7 @@ function NotepadApp() {
                 onDecrypt: decryptFile
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 612,
+                lineNumber: 730,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$clipboard$2d$history$2d$panel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ClipboardHistoryPanel"], {
@@ -9077,7 +9232,7 @@ function NotepadApp() {
                 onClear: ()=>setClipboardHistory([])
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 620,
+                lineNumber: 738,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$keyboard$2d$shortcuts$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["KeyboardShortcutsDialog"], {
@@ -9085,7 +9240,7 @@ function NotepadApp() {
                 onOpenChange: setShortcutsOpen
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 632,
+                lineNumber: 750,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$undo$2d$history$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["UndoHistoryDialog"], {
@@ -9112,7 +9267,7 @@ function NotepadApp() {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 634,
+                lineNumber: 752,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$export$2d$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ExportDialog"], {
@@ -9121,17 +9276,17 @@ function NotepadApp() {
                 file: activeFile
             }, void 0, false, {
                 fileName: "[project]/components/notepad-app.tsx",
-                lineNumber: 656,
+                lineNumber: 774,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/notepad-app.tsx",
-        lineNumber: 522,
+        lineNumber: 640,
         columnNumber: 5
     }, this);
 }
-_s(NotepadApp, "qz80hZEFQQyEiWSw6x3rca/GzPk=", false, function() {
+_s(NotepadApp, "DxXa+YALICcXIQvNO/hyBIg1D0E=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$use$2d$mobile$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useIsMobile"]
     ];

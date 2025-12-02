@@ -70,6 +70,33 @@ const getWelcomeContent = () => {
 ─────────────────────`
 }
 
+// localStorage keys
+const STORAGE_KEYS = {
+  FILES: "notepad_files",
+  ACTIVE_FILE_ID: "notepad_active_file_id",
+  SETTINGS: "notepad_settings",
+  THEME: "notepad_theme",
+  RECENT_FILES: "notepad_recent_files",
+}
+
+// Helper to safely parse JSON from localStorage
+const safeJSONParse = <T,>(value: string | null, fallback: T): T => {
+  if (!value) return fallback
+  try {
+    return JSON.parse(value)
+  } catch {
+    return fallback
+  }
+}
+
+// Helper to restore Date objects from localStorage
+const restoreFileDates = (files: NoteFile[]): NoteFile[] => {
+  return files.map(file => ({
+    ...file,
+    lastModified: new Date(file.lastModified)
+  }))
+}
+
 export function NotepadApp() {
   const [mounted, setMounted] = useState(false)
   const [theme, setTheme] = useState<Theme>("light")
@@ -130,8 +157,65 @@ export function NotepadApp() {
   }, [])
 
   // Initialize files on client side only to avoid hydration mismatch
+  // Load from localStorage if available, otherwise create default welcome file
   useEffect(() => {
     if (!mounted) {
+      // Try to load saved data from localStorage
+      const savedFiles = localStorage.getItem(STORAGE_KEYS.FILES)
+      const savedActiveFileId = localStorage.getItem(STORAGE_KEYS.ACTIVE_FILE_ID)
+      const savedSettings = localStorage.getItem(STORAGE_KEYS.SETTINGS)
+      const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME)
+      const savedRecentFiles = localStorage.getItem(STORAGE_KEYS.RECENT_FILES)
+
+      if (savedFiles) {
+        // Restore files from localStorage
+        const parsedFiles = restoreFileDates(safeJSONParse<NoteFile[]>(savedFiles, []))
+        if (parsedFiles.length > 0) {
+          setFiles(parsedFiles)
+          
+          // Restore active file ID
+          const activeId = savedActiveFileId || parsedFiles[0].id
+          setActiveFileId(activeId)
+          
+          // Restore recent files
+          if (savedRecentFiles) {
+            setRecentFiles(safeJSONParse<string[]>(savedRecentFiles, [activeId]))
+          }
+          
+          // Initialize history for all files
+          const initialHistory = new Map<string, HistoryEntry[]>()
+          const initialHistoryIndex = new Map<string, number>()
+          parsedFiles.forEach(file => {
+            initialHistory.set(file.id, [{ content: file.content, timestamp: new Date() }])
+            initialHistoryIndex.set(file.id, 0)
+          })
+          setHistory(initialHistory)
+          setHistoryIndex(initialHistoryIndex)
+        } else {
+          // No valid files, create default
+          createDefaultFile()
+        }
+      } else {
+        // No saved files, create default welcome file
+        createDefaultFile()
+      }
+
+      // Restore settings
+      if (savedSettings) {
+        const parsedSettings = safeJSONParse<AppSettings>(savedSettings, settings)
+        setSettings(parsedSettings)
+      }
+
+      // Restore theme
+      if (savedTheme) {
+        const parsedTheme = safeJSONParse<Theme>(savedTheme, "light")
+        setTheme(parsedTheme)
+      }
+
+      setMounted(true)
+    }
+    
+    function createDefaultFile() {
       const initialFile: NoteFile = {
         id: "1",
         name: "Welcome.txt",
@@ -142,7 +226,6 @@ export function NotepadApp() {
       setFiles([initialFile])
       setHistory(new Map([["1", [{ content: getWelcomeContent(), timestamp: new Date() }]]]))
       setHistoryIndex(new Map([["1", 0]]))
-      setMounted(true)
     }
   }, [mounted])
 
@@ -155,6 +238,41 @@ export function NotepadApp() {
       setSidebarInitialized(true)
     }
   }, [mounted, isMobile, sidebarInitialized])
+
+  // Save files to localStorage whenever they change
+  useEffect(() => {
+    if (mounted && files.length > 0) {
+      localStorage.setItem(STORAGE_KEYS.FILES, JSON.stringify(files))
+    }
+  }, [mounted, files])
+
+  // Save active file ID to localStorage
+  useEffect(() => {
+    if (mounted && activeFileId) {
+      localStorage.setItem(STORAGE_KEYS.ACTIVE_FILE_ID, JSON.stringify(activeFileId))
+    }
+  }, [mounted, activeFileId])
+
+  // Save settings to localStorage
+  useEffect(() => {
+    if (mounted) {
+      localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(settings))
+    }
+  }, [mounted, settings])
+
+  // Save theme to localStorage
+  useEffect(() => {
+    if (mounted) {
+      localStorage.setItem(STORAGE_KEYS.THEME, JSON.stringify(theme))
+    }
+  }, [mounted, theme])
+
+  // Save recent files to localStorage
+  useEffect(() => {
+    if (mounted && recentFiles.length > 0) {
+      localStorage.setItem(STORAGE_KEYS.RECENT_FILES, JSON.stringify(recentFiles))
+    }
+  }, [mounted, recentFiles])
 
   useEffect(() => {
     if (theme === "dark") {
