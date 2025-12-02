@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   authors: [{ name: "Note No Tea" }],
   creator: "Note No Tea",
   publisher: "Note No Tea",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    viewportFit: "cover",
+  },
   formatDetection: {
     email: false,
     address: false,

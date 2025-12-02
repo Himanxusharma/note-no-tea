@@ -193,8 +193,17 @@
     @apply border-border outline-ring/50;
   }
 
+  html {
+    /* Prevent text size adjustment on orientation change */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-background text-foreground;
+    /* Support for notched phones */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 }
 
@@ -453,20 +462,24 @@
     align-items: center !important;
     gap: 10px !important;
     cursor: pointer !important;
-    padding: 4px 8px !important;
+    padding: 6px 10px !important;
     margin: 2px 0 !important;
     border-radius: 6px !important;
     transition: all 0.15s ease !important;
     user-select: none !important;
     background: transparent !important;
     border: none !important;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
-  .todo-item:hover {
+  .todo-item:hover,
+  .todo-item:active {
     background: var(--color-muted) !important;
   }
 
-  .todo-item:hover .todo-checkbox {
+  .todo-item:hover .todo-checkbox,
+  .todo-item:active .todo-checkbox {
     border-color: var(--color-foreground) !important;
   }
 
@@ -474,7 +487,8 @@
     opacity: 0.5 !important;
   }
 
-  .todo-item[data-checked="true"]:hover {
+  .todo-item[data-checked="true"]:hover,
+  .todo-item[data-checked="true"]:active {
     opacity: 0.7 !important;
   }
 
@@ -482,8 +496,10 @@
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 16px !important;
-    height: 16px !important;
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
     border: 1.5px solid var(--color-muted-foreground) !important;
     border-radius: 4px !important;
     background: transparent !important;
@@ -500,10 +516,26 @@
     flex: 1 !important;
     color: var(--color-foreground) !important;
     font-size: inherit !important;
+    line-height: 1.4 !important;
   }
 
   .todo-item[data-checked="true"] .todo-text {
     text-decoration: line-through !important;
     color: var(--color-muted-foreground) !important;
+  }
+
+  /* Mobile-specific todo adjustments */
+  @media (max-width: 640px) {
+    .todo-item {
+      padding: 8px 12px !important;
+      gap: 12px !important;
+    }
+
+    .todo-checkbox {
+      width: 20px !important;
+      height: 20px !important;
+      min-width: 20px !important;
+      min-height: 20px !important;
+    }
   }
 }

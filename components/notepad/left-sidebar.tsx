@@ -204,6 +204,18 @@ export function LeftSidebar({
         onClick={onCloseSidebar}
       />
       <aside className="fixed md:relative inset-y-0 left-0 z-50 w-72 max-w-[85vw] md:max-w-none border-r border-border glassmorphic shadow-soft flex flex-col sidebar-expand md:z-auto">
+      
+      {/* Mobile close button */}
+      <button
+        onClick={onCloseSidebar}
+        className="absolute top-3 right-3 p-1.5 rounded-lg hover:bg-sidebar-accent transition-colors md:hidden z-10"
+        aria-label="Close sidebar"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
       <div className="p-4 md:p-6 border-b border-sidebar-border">
         <h2 className="text-sm font-medium text-sidebar-foreground mb-4">Files</h2>
         <div className="space-y-1">
@@ -332,21 +344,21 @@ export function LeftSidebar({
             {pendingTodos.map((todo, idx) => (
               <div
                 key={`pending-${idx}`}
-                className="group flex items-center gap-3 py-2 cursor-pointer"
+                className="group flex items-center gap-3 py-2.5 md:py-2 px-1 rounded-md hover:bg-sidebar-accent/30 active:bg-sidebar-accent/50 cursor-pointer transition-colors"
                 onClick={() => toggleTodo(todo)}
               >
-                <div className="w-4 h-4 rounded border border-muted-foreground/40 group-hover:border-foreground transition-colors flex-shrink-0" />
+                <div className="w-5 h-5 md:w-4 md:h-4 rounded border border-muted-foreground/40 group-hover:border-foreground transition-colors flex-shrink-0" />
                 <span className="text-sm flex-1 truncate text-foreground/90 group-hover:text-foreground transition-colors">
                   {todo.text}
                 </span>
                 <button
-                  className="opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive"
+                  className="opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1"
                   onClick={(e) => {
                     e.stopPropagation()
                     deleteTodo(todo)
                   }}
                 >
-                  <Trash2 className="h-3.5 w-3.5" strokeWidth={1.5} />
+                  <Trash2 className="h-4 w-4 md:h-3.5 md:w-3.5" strokeWidth={1.5} />
                 </button>
               </div>
             ))}
@@ -362,11 +374,11 @@ export function LeftSidebar({
                 {doneTodos.map((todo, idx) => (
                   <div
                     key={`done-${idx}`}
-                    className="group flex items-center gap-3 py-1.5 cursor-pointer opacity-40 hover:opacity-60 transition-opacity"
+                    className="group flex items-center gap-3 py-2.5 md:py-1.5 px-1 rounded-md hover:bg-sidebar-accent/30 active:bg-sidebar-accent/50 cursor-pointer opacity-40 hover:opacity-60 transition-all"
                     onClick={() => toggleTodo(todo)}
                   >
-                    <div className="w-4 h-4 rounded border border-foreground/30 bg-foreground/30 flex-shrink-0 flex items-center justify-center">
-                      <svg className="w-2.5 h-2.5 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
+                    <div className="w-5 h-5 md:w-4 md:h-4 rounded border border-foreground/30 bg-foreground/30 flex-shrink-0 flex items-center justify-center">
+                      <svg className="w-3 h-3 md:w-2.5 md:h-2.5 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -374,13 +386,13 @@ export function LeftSidebar({
                       {todo.text}
                     </span>
                     <button
-                      className="opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive"
+                      className="opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1"
                       onClick={(e) => {
                         e.stopPropagation()
                         deleteTodo(todo)
                       }}
                     >
-                      <Trash2 className="h-3.5 w-3.5" strokeWidth={1.5} />
+                      <Trash2 className="h-4 w-4 md:h-3.5 md:w-3.5" strokeWidth={1.5} />
                     </button>
                   </div>
                 ))}

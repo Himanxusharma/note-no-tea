@@ -2143,6 +2143,10 @@
     padding: calc(var(--spacing) * 1);
   }
 
+  .p-1\.5 {
+    padding: calc(var(--spacing) * 1.5);
+  }
+
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -2221,6 +2225,10 @@
 
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
   }
 
   .py-3 {
@@ -3432,6 +3440,18 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-sidebar-accent\/30:hover {
+      background-color: var(--sidebar-accent);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-sidebar-accent\/30:hover {
+        background-color: color-mix(in oklab, var(--sidebar-accent) 30%, transparent);
+      }
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:bg-sidebar-accent\/50:hover {
       background-color: var(--sidebar-accent);
     }
@@ -3708,6 +3728,16 @@
 
   .active\:bg-sidebar-accent:active {
     background-color: var(--sidebar-accent);
+  }
+
+  .active\:bg-sidebar-accent\/50:active {
+    background-color: var(--sidebar-accent);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .active\:bg-sidebar-accent\/50:active {
+      background-color: color-mix(in oklab, var(--sidebar-accent) 50%, transparent);
+    }
   }
 
   .active\:text-sidebar-accent-foreground:active {
@@ -5056,8 +5086,44 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:h-2\.5 {
+      height: calc(var(--spacing) * 2.5);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:h-3\.5 {
+      height: calc(var(--spacing) * 3.5);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:h-4 {
+      height: calc(var(--spacing) * 4);
+    }
+  }
+
+  @media (min-width: 48rem) {
     .md\:h-9 {
       height: calc(var(--spacing) * 9);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:w-2\.5 {
+      width: calc(var(--spacing) * 2.5);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:w-3\.5 {
+      width: calc(var(--spacing) * 3.5);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:w-4 {
+      width: calc(var(--spacing) * 4);
     }
   }
 
@@ -5142,6 +5208,18 @@
   @media (min-width: 48rem) {
     .md\:px-8 {
       padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:py-1\.5 {
+      padding-block: calc(var(--spacing) * 1.5);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:py-2 {
+      padding-block: calc(var(--spacing) * 2);
     }
   }
 
@@ -6274,6 +6352,8 @@
   }
 
   .todo-item {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
     cursor: pointer !important;
     -webkit-user-select: none !important;
     user-select: none !important;
@@ -6283,16 +6363,16 @@
     align-items: center !important;
     gap: 10px !important;
     margin: 2px 0 !important;
-    padding: 4px 8px !important;
+    padding: 6px 10px !important;
     transition: all .15s !important;
     display: inline-flex !important;
   }
 
-  .todo-item:hover {
+  .todo-item:hover, .todo-item:active {
     background: var(--color-muted) !important;
   }
 
-  .todo-item:hover .todo-checkbox {
+  .todo-item:hover .todo-checkbox, .todo-item:active .todo-checkbox {
     border-color: var(--color-foreground) !important;
   }
 
@@ -6300,7 +6380,7 @@
     opacity: .5 !important;
   }
 
-  .todo-item[data-checked="true"]:hover {
+  .todo-item[data-checked="true"]:hover, .todo-item[data-checked="true"]:active {
     opacity: .7 !important;
   }
 
@@ -6311,8 +6391,10 @@
     flex-shrink: 0 !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 16px !important;
-    height: 16px !important;
+    width: 18px !important;
+    min-width: 18px !important;
+    height: 18px !important;
+    min-height: 18px !important;
     transition: all .15s !important;
     display: inline-flex !important;
   }
@@ -6326,11 +6408,26 @@
     color: var(--color-foreground) !important;
     font-size: inherit !important;
     flex: 1 !important;
+    line-height: 1.4 !important;
   }
 
   .todo-item[data-checked="true"] .todo-text {
     color: var(--color-muted-foreground) !important;
     text-decoration: line-through !important;
+  }
+
+  @media (max-width: 640px) {
+    .todo-item {
+      gap: 12px !important;
+      padding: 8px 12px !important;
+    }
+
+    .todo-checkbox {
+      width: 20px !important;
+      min-width: 20px !important;
+      height: 20px !important;
+      min-height: 20px !important;
+    }
   }
 }
 

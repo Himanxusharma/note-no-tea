@@ -2857,6 +2857,35 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
                 className: "fixed md:relative inset-y-0 left-0 z-50 w-72 max-w-[85vw] md:max-w-none border-r border-border glassmorphic shadow-soft flex flex-col sidebar-expand md:z-auto",
                 children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: onCloseSidebar,
+                        className: "absolute top-3 right-3 p-1.5 rounded-lg hover:bg-sidebar-accent transition-colors md:hidden z-10",
+                        "aria-label": "Close sidebar",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                            className: "w-5 h-5",
+                            fill: "none",
+                            stroke: "currentColor",
+                            viewBox: "0 0 24 24",
+                            strokeWidth: 1.5,
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                strokeLinecap: "round",
+                                strokeLinejoin: "round",
+                                d: "M6 18L18 6M6 6l12 12"
+                            }, void 0, false, {
+                                fileName: "[project]/components/notepad/left-sidebar.tsx",
+                                lineNumber: 215,
+                                columnNumber: 11
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/components/notepad/left-sidebar.tsx",
+                            lineNumber: 214,
+                            columnNumber: 9
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/notepad/left-sidebar.tsx",
+                        lineNumber: 209,
+                        columnNumber: 7
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "p-4 md:p-6 border-b border-sidebar-border",
                         children: [
@@ -2865,7 +2894,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                 children: "Files"
                             }, void 0, false, {
                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                lineNumber: 208,
+                                lineNumber: 220,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2886,14 +2915,14 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                         strokeWidth: 1.5
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 224,
+                                                        lineNumber: 236,
                                                         columnNumber: 19
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__["FileText"], {
                                                         className: "h-4 w-4 flex-shrink-0",
                                                         strokeWidth: 1.5
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 226,
+                                                        lineNumber: 238,
                                                         columnNumber: 19
                                                     }, this),
                                                     editingId === file.id ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -2909,14 +2938,14 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                         onClick: (e)=>e.stopPropagation()
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 229,
+                                                        lineNumber: 241,
                                                         columnNumber: 19
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-sm truncate",
                                                         children: file.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 242,
+                                                        lineNumber: 254,
                                                         columnNumber: 19
                                                     }, this),
                                                     file.encrypted && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2924,13 +2953,13 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                         children: "Encrypted"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 245,
+                                                        lineNumber: 257,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                lineNumber: 222,
+                                                lineNumber: 234,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenu"], {
@@ -2946,17 +2975,17 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                                 className: "h-3 w-3"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                lineNumber: 257,
+                                                                lineNumber: 269,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                            lineNumber: 252,
+                                                            lineNumber: 264,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 251,
+                                                        lineNumber: 263,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuContent"], {
@@ -2970,14 +2999,14 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                                         className: "h-3 w-3 mr-2"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                        lineNumber: 262,
+                                                                        lineNumber: 274,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     "Rename"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                lineNumber: 261,
+                                                                lineNumber: 273,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -2987,14 +3016,14 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                                         className: "h-3 w-3 mr-2"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                        lineNumber: 266,
+                                                                        lineNumber: 278,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     "Duplicate"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                lineNumber: 265,
+                                                                lineNumber: 277,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
@@ -3005,43 +3034,43 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                                         className: "h-3 w-3 mr-2"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                        lineNumber: 270,
+                                                                        lineNumber: 282,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     "Delete"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                lineNumber: 269,
+                                                                lineNumber: 281,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 260,
+                                                        lineNumber: 272,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                lineNumber: 250,
+                                                lineNumber: 262,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, file.id, true, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 211,
+                                        lineNumber: 223,
                                         columnNumber: 13
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                lineNumber: 209,
+                                lineNumber: 221,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                        lineNumber: 207,
+                        lineNumber: 219,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3055,7 +3084,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                         children: "Tasks"
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 283,
+                                        lineNumber: 295,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3066,18 +3095,18 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             strokeWidth: 1.5
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 290,
+                                            lineNumber: 302,
                                             columnNumber: 13
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 286,
+                                        lineNumber: 298,
                                         columnNumber: 11
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                lineNumber: 282,
+                                lineNumber: 294,
                                 columnNumber: 9
                             }, this),
                             isAddingTodo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3102,12 +3131,12 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 297,
+                                    lineNumber: 309,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                lineNumber: 296,
+                                lineNumber: 308,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3119,20 +3148,20 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                         children: "+ Add a task..."
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 322,
+                                        lineNumber: 334,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "space-y-0.5",
                                         children: pendingTodos.map((todo, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "group flex items-center gap-3 py-2 cursor-pointer",
+                                                className: "group flex items-center gap-3 py-2.5 md:py-2 px-1 rounded-md hover:bg-sidebar-accent/30 active:bg-sidebar-accent/50 cursor-pointer transition-colors",
                                                 onClick: ()=>toggleTodo(todo),
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "w-4 h-4 rounded border border-muted-foreground/40 group-hover:border-foreground transition-colors flex-shrink-0"
+                                                        className: "w-5 h-5 md:w-4 md:h-4 rounded border border-muted-foreground/40 group-hover:border-foreground transition-colors flex-shrink-0"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 338,
+                                                        lineNumber: 350,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3140,37 +3169,37 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                         children: todo.text
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 339,
+                                                        lineNumber: 351,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                        className: "opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive",
+                                                        className: "opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1",
                                                         onClick: (e)=>{
                                                             e.stopPropagation();
                                                             deleteTodo(todo);
                                                         },
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
-                                                            className: "h-3.5 w-3.5",
+                                                            className: "h-4 w-4 md:h-3.5 md:w-3.5",
                                                             strokeWidth: 1.5
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                            lineNumber: 349,
+                                                            lineNumber: 361,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 342,
+                                                        lineNumber: 354,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, `pending-${idx}`, true, {
                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                lineNumber: 333,
+                                                lineNumber: 345,
                                                 columnNumber: 15
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 331,
+                                        lineNumber: 343,
                                         columnNumber: 11
                                     }, this),
                                     doneTodos.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3184,19 +3213,19 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                lineNumber: 358,
+                                                lineNumber: 370,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-0.5",
                                                 children: doneTodos.map((todo, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "group flex items-center gap-3 py-1.5 cursor-pointer opacity-40 hover:opacity-60 transition-opacity",
+                                                        className: "group flex items-center gap-3 py-2.5 md:py-1.5 px-1 rounded-md hover:bg-sidebar-accent/30 active:bg-sidebar-accent/50 cursor-pointer opacity-40 hover:opacity-60 transition-all",
                                                         onClick: ()=>toggleTodo(todo),
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "w-4 h-4 rounded border border-foreground/30 bg-foreground/30 flex-shrink-0 flex items-center justify-center",
+                                                                className: "w-5 h-5 md:w-4 md:h-4 rounded border border-foreground/30 bg-foreground/30 flex-shrink-0 flex items-center justify-center",
                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                                    className: "w-2.5 h-2.5 text-background",
+                                                                    className: "w-3 h-3 md:w-2.5 md:h-2.5 text-background",
                                                                     fill: "none",
                                                                     stroke: "currentColor",
                                                                     viewBox: "0 0 24 24",
@@ -3207,17 +3236,17 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                                         d: "M5 13l4 4L19 7"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                        lineNumber: 370,
+                                                                        lineNumber: 382,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                    lineNumber: 369,
+                                                                    lineNumber: 381,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                lineNumber: 368,
+                                                                lineNumber: 380,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3225,55 +3254,55 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                                 children: todo.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                lineNumber: 373,
+                                                                lineNumber: 385,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                className: "opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive",
+                                                                className: "opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive p-1",
                                                                 onClick: (e)=>{
                                                                     e.stopPropagation();
                                                                     deleteTodo(todo);
                                                                 },
                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
-                                                                    className: "h-3.5 w-3.5",
+                                                                    className: "h-4 w-4 md:h-3.5 md:w-3.5",
                                                                     strokeWidth: 1.5
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                    lineNumber: 383,
+                                                                    lineNumber: 395,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                                lineNumber: 376,
+                                                                lineNumber: 388,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, `done-${idx}`, true, {
                                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                        lineNumber: 363,
+                                                        lineNumber: 375,
                                                         columnNumber: 19
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                lineNumber: 361,
+                                                lineNumber: 373,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 357,
+                                        lineNumber: 369,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                lineNumber: 319,
+                                lineNumber: 331,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                        lineNumber: 281,
+                        lineNumber: 293,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3287,14 +3316,14 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                         strokeWidth: 1.5
                                     }, void 0, false, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 395,
+                                        lineNumber: 407,
                                         columnNumber: 11
                                     }, this),
                                     "Recent"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                lineNumber: 394,
+                                lineNumber: 406,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3305,18 +3334,18 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                         children: file.name
                                     }, file.id, false, {
                                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                        lineNumber: 400,
+                                        lineNumber: 412,
                                         columnNumber: 13
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                lineNumber: 398,
+                                lineNumber: 410,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                        lineNumber: 393,
+                        lineNumber: 405,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3331,7 +3360,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             children: "Words"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 414,
+                                            lineNumber: 426,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3339,13 +3368,13 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             children: wordCount
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 415,
+                                            lineNumber: 427,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 413,
+                                    lineNumber: 425,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3355,7 +3384,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             children: "Characters"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 418,
+                                            lineNumber: 430,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3363,24 +3392,24 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             children: charCount
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 419,
+                                            lineNumber: 431,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 417,
+                                    lineNumber: 429,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                            lineNumber: 412,
+                            lineNumber: 424,
                             columnNumber: 9
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                        lineNumber: 411,
+                        lineNumber: 423,
                         columnNumber: 7
                     }, this),
                     contextMenu && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$notepad$2f$context$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ContextMenu"], {
@@ -3393,7 +3422,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                         onClose: ()=>setContextMenu(null)
                     }, void 0, false, {
                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                        lineNumber: 425,
+                        lineNumber: 437,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
@@ -3411,14 +3440,14 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                     className: "h-5 w-5 text-amber-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                    lineNumber: 447,
+                                                    lineNumber: 459,
                                                     columnNumber: 15
                                                 }, this),
                                                 "Unlock File"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 446,
+                                            lineNumber: 458,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogDescription"], {
@@ -3429,13 +3458,13 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 450,
+                                            lineNumber: 462,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 445,
+                                    lineNumber: 457,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3449,7 +3478,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                     children: "Password"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                    lineNumber: 456,
+                                                    lineNumber: 468,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -3467,13 +3496,13 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                     autoFocus: true
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                    lineNumber: 457,
+                                                    lineNumber: 469,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 455,
+                                            lineNumber: 467,
                                             columnNumber: 13
                                         }, this),
                                         unlockError && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3483,20 +3512,20 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                    lineNumber: 474,
+                                                    lineNumber: 486,
                                                     columnNumber: 17
                                                 }, this),
                                                 unlockError
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 473,
+                                            lineNumber: 485,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 454,
+                                    lineNumber: 466,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3509,7 +3538,7 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                             children: "Cancel"
                                         }, void 0, false, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 480,
+                                            lineNumber: 492,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -3520,31 +3549,31 @@ function LeftSidebar({ files, activeFileId, onSelectFile, onDeleteFile, onRename
                                                     className: "h-4 w-4 mr-2"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                                    lineNumber: 484,
+                                                    lineNumber: 496,
                                                     columnNumber: 15
                                                 }, this),
                                                 "Unlock"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                            lineNumber: 483,
+                                            lineNumber: 495,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/notepad/left-sidebar.tsx",
-                                    lineNumber: 479,
+                                    lineNumber: 491,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/notepad/left-sidebar.tsx",
-                            lineNumber: 444,
+                            lineNumber: 456,
                             columnNumber: 9
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/notepad/left-sidebar.tsx",
-                        lineNumber: 443,
+                        lineNumber: 455,
                         columnNumber: 7
                     }, this)
                 ]
